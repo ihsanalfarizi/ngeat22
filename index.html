@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65">
+  <link rel="stylesheet" href="public/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  
+
+  <title>Nge Eat</title>
+  <link rel="shortcut icon" href="src/image/Logo Nge Eat.png">
+</head>
+<body>
+ 
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.css"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <nav class="border-gray-200 bg-orange-600 dark:bg-orange-600 dark:border-gray-700 top-0 left-0 right-0 sticky-top overflow-x-hidden ">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
+      <a href="#Home" class="flex items-center">
+        <img src="src/image/Logo Nge Eat.png" class="w-20 ml-1 md:w-26 lg:w-38" alt="Kuramen Logo" />
+        <div class="d-flex justify-content-center align-items-center h-100" >
+        <h1 class="no-underline self-center text-3xl font-semibold whitespace-nowrap dark:text-white">Nge Eat</h1>
+        <h2 class="no-underline self-center text-font-semibold p-2 whitespace-nowrap dark:text-white">Batu Aji</h2>
+        <!-- <h2 class=" absolute text-3xl text-white top-1/2 left-8 -translate-x-1/2 -translate-y-16 drop-shadow-md shadow-black-600/50 font-extrabold ">Nge Eat</h2>
+        <h4 class=" absolute text-xl text-white top-1/2 left-6 -translate-x-1/2 -translate-y-1/8 drop-shadow-md shadow-black-600/50 font-bold">Batu Aji</h4> -->
+      </div>
+      </a>
+  
+      <button id="toggleMenu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-white-100 focus:outline-none focus:ring-2 focus:ring-white-200 dark:text-gray-400 dark:hover:bg-blue-600 dark:focus:ring-white-600" aria-controls="myLinks" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+      </button>
+  
+      <div class="hidden w-full md:block md:w-auto" id="myLinks">
+        <!-- Menu items here -->
+        <ul class="flex flex-col font-medium mt-0 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+          <li>
+            <a href="#Home" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:no-underline">Home</a>
+          </li>
+          <li>
+            <a href="#About" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:no-underline">About</a>
+          </li>
+          <li>
+            <a href="#Menu" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:no-underline">Menu</a>
+          </li>
+          <li>
+            <a href="#Location" class="block py-2 pl-3 pr-4 fo text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:no-underline">Location</a>
+          </li>
+          <li>
+            <a  href="#Order" class='mx-2 mb-2 btn bg-red-600 block py-2 pl-3 pr-4 rounded-3xl 
+            font-semibold text-black hover:bg-gray-100'> Order Now</a>
+          </li>
+        </ul>     
+      </div>
+    </div>
+  </nav>
+  
+<section id="Home">
+<header class="header">
+
+<div
+  class=" w-full h-full bg-no-repeat bg-cover bg-fixed " data-aos="fade"
+  style="background-image: url('src/image/Bg\ Rice\ Bowl.webp');  height: 800px;  ">
+  <div class="d-flex justify-content-center align-items-center h-100" 
+  style="background-color: rgba(0, 0, 0, 0.6);">
+ 
+
+        <h2 class=" absolute text-6xl text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-16 drop-shadow-md shadow-black-600/50 font-extrabold ">Nge Eat</h2>
+        <h4 class=" absolute text-xl text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/8 drop-shadow-md shadow-black-600/50 font-bold">By Nada</h4>
+    </div> 
+  </div>
+</header>
+</section>
+<br>
+<br>
+<br>
+<br>
+<section id="About">
+
+  <div class="container">
+
+
+  <div class="card mt-10">
+    <div class=" md:h-full card-body bg-gradient-to-r from-orange-600 to-blue-950 shadow-2xl">
+      <div class="section-devider my-6 mx- transparent">
+              <div class="row align-items-center">
+                <div class="col-md-7" data-aos="fade">
+                  <h2 class="text-white text-6xl font-bold drop-shadow-md shadow-black-600/50 mb-4">Nge Eat</h2>
+                  <p class="text-white text-lg font-medium drop-shadow-md shadow-black-600-50">Nge Eat, Batu Aji merupakan tempat makan yang berada di batam, Rumah makan ini menyajikan berbagai aneka menu Rice Bowl chicken cepat saji yang dibanderol 
+                    dengan harga yang murah dan bersahabat dengan kantong anda. Jika anda mencari daftar harga menu Nge Eat , Batu Aji Anda berada di tempat Yang tepat.
+                  </p>
+                </div>  
+          <div class="col-md-5 mt-6" data-aos="fade-left">
+            <img src="src/image/Nge eat bg1.jpg"
+              class="md:h-96 max-w-full rounded-lg hover:bg-contain"
+              alt="upper-info" />
+            </div>  
+          </div>
+        </div>
+    </div>
+  </div>
+
+</div>
+  <br>
+
+
+
+  
+      <!-- <div class="card ">
+        <div class=" md:h-full card-body bg-gradient-to-r from-blue-950 to-orange-600">
+          <div class="section-devider my-6 mx-6 transparent">
+                  <div class="row align-items-center">
+                    <div class="col-md-7" data-aos="fade">
+                      <h2 class="text-white text-6xl font-bold drop-shadow-md shadow-black-600/50">Kuramen</h2>
+                      <p class="text-white text-lg font-medium drop-shadow-md shadow-black-600-50">Our effort in making our customers pleased with our excellent service and 
+                          great food made us have come to realize that we should expand our restaurants and share the joy in other countries as well.</p>
+                    </div>  
+              <div class="col-md-5 order-1 order-sm-first mt-6" data-aos="fade-right">
+                <img src="src/image/udon.jpg"
+                  class="md:h-96 max-w-full rounded-lg hover:bg-contain"
+                  alt="upper-info" />
+                </div>  
+              </div>
+            </div>
+        </div>
+      </div> -->
+      
+</section>
+
+<br>
+<br>
+<br>
+
+
+  <section id="Menu" class="menu section-padding">
+    <br>
+    <br>
+    <br>
+                     
+    <div
+    class=" w-full h-full bg-no-repeat bg-cover bg-fixed " data-aos="fade"
+    style="background-image: url('src/image/Bg\ Menu.webp');  ">
+      <div class=" text-center " data-aos="fade">
+       
+          <h1 class="text-blue-600 text-6xl font-extrabold drop-shadow-md shadow-black-600/50 uppercase"> Our menu</h1>
+          <div class="col-10 col-md-10 mx-auto">
+          <nav class="nav nav-pills row my-3 mx-1 mt-10 row mx-auto  "  id="menu-category-11-row-0">
+
+            <a class="col-5 col-md-4 mb-3 mx-auto rounded-pill text-center nav-link my-1 border border-2 hover:bg-gray-400 active  " id="ricebowl-tab" data-toggle="pill" href="#ricebowl" role="tab" aria-controls="ramen" aria-selected="true" style="min-width: 140px">
+     <div class=" justify-content-center ">
+         <div class="py-0 px-0 mr-2 mr-md-0">
+             Rice Bowl                         </div>
+     </div>
+ </a>
+ <a class="col-5 col-md-4 mb-3 mx-auto rounded-pill text-center nav-link my-1 border border-2 hover:bg-gray-400" id="set-menu-tab" data-toggle="pill" href="#set-menu" role="tab" aria-controls="main-menu" aria-selected="false" style="min-width: 140px">
+  <div class=" justify-content-center">
+      <div class="py-0 px-0 mr-2 mr-md-0">
+          Set Menu</div>
+  </div>
+</a>
+
+ <a class="col-5 col-md-4 mb-3 mx-auto rounded-pill text-center nav-link my-1 border border-2 hover:bg-gray-400" id="desserts-tab" data-toggle="pill" href="#desserts" role="tab" aria-controls="desserts" aria-selected="true" style="min-width: 140px">
+   <div class=" justify-content-center">
+       <div class="py-0 px-0 mr-2 mr-md-0">
+           Dessert                     </div>
+   </div>
+   </a>
+
+                     <a class="col-5 col-md-4 mb-3 mx-auto rounded-pill text-center nav-link my-1 border border-2 hover:bg-gray-400" id="snacks-tab" data-toggle="pill" href="#snacks" role="tab" aria-controls="snacks" aria-selected="true" style="min-width: 140px">
+     <div class=" justify-content-center">
+         <div class="py-0 px-0 mr-2 mr-md-0">
+             Snacks                            </div>
+     </div>
+ </a>
+                     <a class="col-5 col-md-4 mb-3 mx-auto rounded-pill text-center nav-link my-1 border border-2 hover:bg-gray-400 " id="beverages-tab" data-toggle="pill" href="#beverages" role="tab" aria-controls="beverages" aria-selected="true" style="min-width: 140px">
+     <div class=" justify-content-center">
+         <div class="py-0 px-0 mr-2 mr-md-0">
+             Beverages                            </div>
+     </div>
+ </a>
+                     <a class="col-5 col-md-4 mb-3 mx-auto rounded-pill text-center nav-link my-1 border border-2 hover:bg-gray-400" id="side-dish-tab" data-toggle="pill" href="#side-dish" role="tab" aria-controls="side-dish" aria-selected="false" style="min-width: 140px">
+     <div class=" justify-content-center">
+         <div class="py-0 px-0 mr-2 mr-md-0">
+             Side Dish                            </div>
+     </div>
+ </a>     
+
+ <a class="col-8 col-md-4 mb-3 mx-auto rounded-pill text-center nav-link my-1 border border-2 hover:bg-gray-400" id="ricebowlx-tab" data-toggle="pill" href="#ricebowlx" aria-controls="ramen" aria-selected="true" style="min-width: 140px">
+  <div class=" justify-content-center">
+  <div class="py-0 px-0 mr-2 mr-md-0">
+  Rice Bowl (Extra Lauk)
+  </div>
+  </div>
+  </a>
+  
+   <a class="col-8 col-md-4 mb-3 mx-auto rounded-pill text-center nav-link my-1 border border-2 hover:bg-gray-400 " id="alacarte-tab" data-toggle="pill" href="#alacarte" role="tab" aria-controls="alacarte" aria-selected="true" style="min-width: 140px">
+     <div class=" justify-content-center">
+         <div class="py-0 px-0 mr-2 mr-md-0">
+             Ala Carte (Lauk saja)                        </div>
+     </div>
+  </a>
+                 </nav>
+         
+      </div>
+        <div class="container ">
+        <div class="col-12 col-md-10 mx-md-auto col-xl-11 ">
+         
+          <!--end nav menu category-->
+
+          <!--tab content menu-->
+          <div class="tab-content" id="pills-tab-categoryContent">
+                                                                                              <div class="tab-pane fade active show" id="ricebowl" role="tabpanel" aria-labelledby="ricebowl-tab">
+                                                                  <div class="row" id="menu-category-11-row-0">
+                                                  <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                          <!--card menu-->
+                        
+                            <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                                <div class="card-body d-flex flex-column text-center ">
+                                    <img src="src/image/Rice Bowl Fire Chicken Mentai.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                          
+                                    <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Rice Bowl Fire Chicken Mentai Popcorn</p>
+                          
+                                    <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                        Rp. 27.500                        </p>
+                          
+                                    <div class="form-inline mt-3 mb-0 mx-60">
+                                         <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                         hover:bg-gray-400  text-black'> +
+                                            Order</a>
+                                    </div>
+                                </div>
+                            </div>
+                       
+                          <!--end card menu-->
+
+                                                          <!--end checking is order-->
+                      </div>
+                      
+                        
+                    
+                    <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                      <!--card menu-->
+                      <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                        <div class="card-body d-flex flex-column text-center ">
+                            <img src="src/image/Rice Bowl Sambal Geprek.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                  
+                            <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Rice Bowl Ayam Sambal Geprek</p>
+                  
+                            <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                Rp. 27.500                        </p>
+                  
+                            <div class="form-inline mt-3 mb-0 mx-60">
+                                 <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                 hover:bg-gray-400  text-black'> +
+                                    Order</a>
+                            </div>
+                        </div>
+                    </div>
+               
+                      <!--end card menu-->
+
+                                                      <!--end checking is order-->
+                  </div>                  
+                                                  <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                          <!--card menu-->
+                          <div class="card 'border border-gray-300  bg-white rounded-3xl shadow-3xl overflow-hidden">
+                            <div class="card-body d-flex flex-column text-center ">
+                                <img src="src/image/Rice Bowl Saus BBq.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                      
+                                <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Rice Bowl Fire Chicken  Popcorn Saus BBQ</p>
+                      
+                                <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                    Rp. 27.500                        </p>
+                      
+                                <div class="form-inline mt-3 mb-0 mx-60">
+                                     <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                     hover:bg-gray-400  text-black'> +
+                                        Order</a>
+                                </div>
+                            </div>
+                        </div>
+                   
+                          <!--end card menu-->
+
+                                                          <!--end checking is order-->
+                      </div>
+
+                      <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                        <!--card menu-->
+                      
+                          <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                              <div class="card-body d-flex flex-column text-center ">
+                                  <img src="src/image/Rice Bowl Sambal Matah.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                        
+                                  <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Rice Bowl Ayam Sambal Matah</p>
+                        
+                                  <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                      Rp. 27.500                        </p>
+                        
+                                  <div class="form-inline mt-3 mb-0 mx-60">
+                                       <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                       hover:bg-gray-400  text-black'> +
+                                          Order</a>
+                                  </div>
+                              </div>
+                          </div>
+                     
+                        <!--end card menu-->
+
+                                                        <!--end checking is order-->
+                    </div>
+
+                  <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                    <!--card menu-->
+                    <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                      <div class="card-body d-flex flex-column text-center ">
+                          <img src="src/image/rice_bowl_fire_chickpop-removebg-preview.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                
+                          <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Rice Bowl Fire Chicken Pop</p>
+                
+                          <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                              Rp. 27.500                        </p>
+                
+                          <div class="form-inline mt-3 mb-0 mx-60">
+                               <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                               hover:bg-gray-400  text-black'> +
+                                  Order</a>
+                          </div>
+                      </div>
+                  </div>
+             
+                    <!--end card menu-->
+
+                                                    <!--end checking is order-->
+                </div>
+
+                  <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                    <!--card menu-->
+                    <div class="card 'border border-gray-300  bg-white rounded-3xl shadow-3xl overflow-hidden">
+                      <div class="card-body d-flex flex-column text-center ">
+                          <img src="src/image/Rice Bowl Cabe Ijo.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                
+                          <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Rice Bowl Ayam Cabe Ijo</p>
+                
+                          <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                              Rp. 27.500                        </p>
+                
+                          <div class="form-inline mt-3 mb-0 mx-60">
+                               <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                               hover:bg-gray-400  text-black'> +
+                                  Order</a>
+                          </div>
+                      </div>
+                  </div>
+             
+                    <!--end card menu-->
+
+                                                    <!--end checking is order-->
+                </div>
+
+             
+
+                      <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                      <!--card menu-->
+                      <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                        <div class="card-body d-flex flex-column text-center ">
+                            <img src="src/image/Crazy Rice bowl.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                  
+                            <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Crazy Rice Bowl</p>
+                  
+                            <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                Rp. 27.500                        </p>
+                  
+                            <div class="form-inline mt-3 mb-0 mx-60">
+                                 <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                 hover:bg-gray-400  text-black'> +
+                                    Order</a>
+                            </div>
+                        </div>
+                    </div>
+               
+                      <!--end card menu-->
+
+                                                      <!--end checking is order-->
+                  </div>
+                  <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                    <!--card menu-->
+                    <div class="card 'border border-gray-300  bg-white rounded-3xl shadow-3xl overflow-hidden">
+                      <div class="card-body d-flex flex-column text-center ">
+                          <img src="src/image/Crazy Rice bowl.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                
+                          <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Crazy Egg Bowl</p>
+                
+                          <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                              Rp. 27.500                        </p>
+                
+                          <div class="form-inline mt-3 mb-0 mx-60">
+                               <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                               hover:bg-gray-400  text-black'> +
+                                  Order</a>
+                          </div>
+                      </div>
+                  </div>
+             
+                    <!--end card menu-->
+
+                                            
+                </div>
+
+                <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                  <!--card menu-->
+                
+                    <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                        <div class="card-body d-flex flex-column text-center ">
+                            <img src="src/image/Original Rice Bowl.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                  
+                            <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Original Rice bowl Chicken Popcorn</p>
+                  
+                            <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                Rp. 27.500                        </p>
+                  
+                            <div class="form-inline mt-3 mb-0 mx-60">
+                                 <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                 hover:bg-gray-400  text-black'> +
+                                    Order</a>
+                            </div>
+                        </div>
+                    </div>
+               
+                  <!--end card menu-->
+
+                                                  <!--end checking is order-->
+              </div>
+                                              </div>   
+                                                              </div>
+              
+                                                              <div class="tab-pane fade " id="ricebowlx" role="tabpanel" aria-labelledby="ricebowlx-tab">
+                                                                <div class="row" id="menu-category-11-row-0">
+                                                <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                        <!--card menu-->
+                      
+                          <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                              <div class="card-body d-flex flex-column text-center ">
+                                  <img src="src/image/Rice Bowl Fire Chicken Mentai.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                        
+                                  <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Rice Bowl Mentai ChickPop (Extra Lauk)</p>
+                        
+                                  <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                      Rp. 27.500                        </p>
+                        
+                                  <div class="form-inline mt-3 mb-0 mx-60">
+                                       <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                       hover:bg-gray-400  text-black'> +
+                                          Order</a>
+                                  </div>
+                              </div>
+                          </div>
+                     
+                        <!--end card menu-->
+
+                                                        <!--end checking is order-->
+                    </div>
+                                                <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                        <!--card menu-->
+                        <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                          <div class="card-body d-flex flex-column text-center ">
+                              <img src="src/image/Rice Bowl Fire Chicken Mentai.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                    
+                              <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Rice Bowl Fire ChickPop (Extra Lauk)</p>
+                    
+                              <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                  Rp. 27.500                        </p>
+                    
+                              <div class="form-inline mt-3 mb-0 mx-60">
+                                   <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                   hover:bg-gray-400  text-black'> +
+                                      Order</a>
+                              </div>
+                          </div>
+                      </div>
+                 
+                        <!--end card menu-->
+
+                                                        <!--end checking is order-->
+                    </div>
+                                                <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                        <!--card menu-->
+                        <div class="card 'border border-gray-300  bg-white rounded-3xl shadow-3xl overflow-hidden">
+                          <div class="card-body d-flex flex-column text-center ">
+                              <img src="src/image/Rice Bowl Fire Chicken Mentai.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                    
+                              <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Rice Bowl BBQ ChickPop (Extra Lauk)</p>
+                    
+                              <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                  Rp. 27.500                        </p>
+                    
+                              <div class="form-inline mt-3 mb-0 mx-60">
+                                   <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                   hover:bg-gray-400  text-black'> +
+                                      Order</a>
+                              </div>
+                          </div>
+                      </div>
+                 
+                        <!--end card menu-->
+
+                                                        <!--end checking is order-->
+                    </div>
+
+                    <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                      <!--card menu-->
+                    
+                        <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                            <div class="card-body d-flex flex-column text-center ">
+                                <img src="src/image/Rice Bowl Fire Chicken Mentai.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                      
+                                <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Rice bowl Matah ChickPop (Extra Lauk)</p>
+                      
+                                <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                    Rp. 27.500                        </p>
+                      
+                                <div class="form-inline mt-3 mb-0 mx-60">
+                                     <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                     hover:bg-gray-400  text-black'> +
+                                        Order</a>
+                                </div>
+                            </div>
+                        </div>
+                   
+                      <!--end card menu-->
+
+                                                      <!--end checking is order-->
+                  </div>
+
+                  <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                    <!--card menu-->
+                    <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                      <div class="card-body d-flex flex-column text-center ">
+                          <img src="src/image/Rice Bowl Fire Chicken Mentai.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                
+                          <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Rice bowl  Sambal Geprek (Extra Lauk)</p>
+                
+                          <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                              Rp. 27.500                        </p>
+                
+                          <div class="form-inline mt-3 mb-0 mx-60">
+                               <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                               hover:bg-gray-400  text-black'> +
+                                  Order</a>
+                          </div>
+                      </div>
+                  </div>
+             
+                    <!--end card menu-->
+
+                                                    <!--end checking is order-->
+                </div>
+
+                <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                  <!--card menu-->
+                  <div class="card 'border border-gray-300  bg-white rounded-3xl shadow-3xl overflow-hidden">
+                    <div class="card-body d-flex flex-column text-center ">
+                        <img src="src/image/Rice Bowl Fire Chicken Mentai.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+              
+                        <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Rice Bowl ORI ChickPop (Extra Lauk)</p>
+              
+                        <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                            Rp. 27.500                        </p>
+              
+                        <div class="form-inline mt-3 mb-0 mx-60">
+                             <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                             hover:bg-gray-400  text-black'> +
+                                Order</a>
+                        </div>
+                    </div>
+                </div>
+           
+                  <!--end card menu-->
+
+                                                  <!--end checking is order-->
+              </div>
+
+              <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                <!--card menu-->
+              
+                  <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                      <div class="card-body d-flex flex-column text-center ">
+                          <img src="src/image/Rice Bowl Fire Chicken Mentai.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                
+                          <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Rice bowl Ayam Cabe Ijo (Extra Lauk)</p>
+                
+                          <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                              Rp. 27.500                        </p>
+                
+                          <div class="form-inline mt-3 mb-0 mx-60">
+                               <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                               hover:bg-gray-400  text-black'> +
+                                  Order</a>
+                          </div>
+                      </div>
+                  </div>
+             
+                <!--end card menu-->
+
+                                                <!--end checking is order-->
+            </div>
+
+            <div class="col-6 col-md-4 mb-3 mx-auto">
+
+              <!--card menu-->
+              <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                <div class="card-body d-flex flex-column text-center ">
+                    <img src="src/image/Rice Bowl Fire Chicken Mentai.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+          
+                    <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Rice Bowl Fire Chicken Mentai Extra Lauk</p>
+          
+                    <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                        Rp. 27.500                        </p>
+          
+                    <div class="form-inline mt-3 mb-0 mx-60">
+                         <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                         hover:bg-gray-400  text-black'> +
+                            Order</a>
+                    </div>
+                </div>
+            </div>
+       
+              <!--end card menu-->
+
+                                              <!--end checking is order-->
+          </div>
+                                            </div>   
+                                                            </div>
+                                                            
+                                  <div class="tab-pane fade" id="set-menu" role="tabpanel" aria-labelledby="set-menu-tab">
+                                                                  <div class="row" id="menu-category-1-row-0">
+                                                  <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                          <!--card menu-->
+                          <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                            <div class="card-body d-flex flex-column text-center ">
+                                <img src="src/image/Rice Bowl Fire Chicken Mentai.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                      
+                                <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Original Rice bowl Chickpop + Ice Tea/Sanford</p>
+                      
+                                <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                    Rp. 27.500                        </p>
+                      
+                                <div class="form-inline mt-3 mb-0 mx-60">
+                                     <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                     hover:bg-gray-400  text-black'> +
+                                        Order</a>
+                                </div>
+                            </div>
+                        </div>
+                          <!--end card menu-->
+
+                                                          <!--end checking is order-->
+                      </div>
+                                                  <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                          <!--card menu-->
+                          <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                            <div class="card-body d-flex flex-column text-center ">
+                                <img src="src/image/Rice Bowl Fire Chicken Mentai.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                      
+                                <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Rice Bowl Chickpop Saus BBQ + Ice Tea/Sanford</p>
+                      
+                                <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                    Rp. 27.500                        </p>
+                      
+                                <div class="form-inline mt-3 mb-0 mx-60">
+                                     <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                     hover:bg-gray-400  text-black'> +
+                                        Order</a>
+                                </div>
+                            </div>
+                        </div>
+                          <!--end card menu-->
+
+                                                          <!--end checking is order-->
+                      </div>
+                      
+                                                  <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                          <!--card menu-->
+                          <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                            <div class="card-body d-flex flex-column text-center ">
+                                <img src="src/image/Rice Bowl Fire Chicken Mentai.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                      
+                                <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Rice Bowl Chickpop Sambal Matah + Ice Tea/Sanford</p>
+                      
+                                <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                    Rp. 27.500                        </p>
+                      
+                                <div class="form-inline mt-3 mb-0 mx-60">
+                                     <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                     hover:bg-gray-400  text-black'> +
+                                        Order</a>
+                                </div>
+                            </div>
+                        </div>
+                          <!--end card menu-->
+
+                                                          <!--end checking is order-->
+                      </div>
+
+                      <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                        <!--card menu-->
+                        <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                          <div class="card-body d-flex flex-column text-center ">
+                              <img src="src/image/Rice Bowl Fire Chicken Mentai.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                    
+                              <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Rice Bowl Chickpop Sambal Geprek + Ice Tea/Sanford</p>
+                    
+                              <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                  Rp. 27.500                        </p>
+                    
+                              <div class="form-inline mt-3 mb-0 mx-60">
+                                   <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                   hover:bg-gray-400  text-black'> +
+                                      Order</a>
+                              </div>
+                          </div>
+                      </div>
+                        <!--end card menu-->
+
+                                                        <!--end checking is order-->
+                    </div>
+
+                    <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                      <!--card menu-->
+                      <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                        <div class="card-body d-flex flex-column text-center ">
+                            <img src="src/image/Rice Bowl Fire Chicken Mentai.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                  
+                            <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Rice bowl Mentai Chickpop + Ice Tea/Sanford</p>
+                  
+                            <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                Rp. 27.500                        </p>
+                  
+                            <div class="form-inline mt-3 mb-0 mx-60">
+                                 <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                 hover:bg-gray-400  text-black'> +
+                                    Order</a>
+                            </div>
+                        </div>
+                    </div>
+                      <!--end card menu-->
+
+                                                      <!--end checking is order-->
+                  </div>
+
+                  <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                    <!--card menu-->
+                    <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                      <div class="card-body d-flex flex-column text-center ">
+                          <img src="src/image/Rice Bowl Fire Chicken Mentai.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                
+                          <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Rice bowl Chickpop Sambal Cabe Ijo + Ice Tea/Sanford</p>
+                
+                          <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                              Rp. 27.500                        </p>
+                
+                          <div class="form-inline mt-3 mb-0 mx-60">
+                               <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                               hover:bg-gray-400  text-black'> +
+                                  Order</a>
+                          </div>
+                      </div>
+                  </div>
+                    <!--end card menu-->
+
+                                                    <!--end checking is order-->
+                </div>
+
+                <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                  <!--card menu-->
+                  <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                    <div class="card-body d-flex flex-column text-center ">
+                        <img src="src/image/Rice Bowl Fire Chicken Mentai.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+              
+                        <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Rice Bowl Fire Chickpop + Ice Tea/Sanford</p>
+              
+                        <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                            Rp. 27.500                        </p>
+              
+                        <div class="form-inline mt-3 mb-0 mx-60">
+                             <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                             hover:bg-gray-400  text-black'> +
+                                Order</a>
+                        </div>
+                    </div>
+                </div>
+                  <!--end card menu-->
+
+                                                  <!--end checking is order-->
+              </div>
+                                              </div>
+                                                              </div>
+                
+                                                              <div class="tab-pane fade " id="alacarte" role="tabpanel" aria-labelledby="alacarte-tab">
+                                                                <div class="row" id="menu-category-11-row-0">
+                                                <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                        <!--card menu-->
+                      
+                          <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                              <div class="card-body d-flex flex-column text-center ">
+                                  <img src="src/image/Rice Bowl Fire Chicken Mentai.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                        
+                                  <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Fire ChickPop (LAUK SAJA)
+                        
+                                  <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                      Rp. 27.500                        </p>
+                        
+                                  <div class="form-inline mt-3 mb-0 mx-60">
+                                       <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                       hover:bg-gray-400  text-black'> +
+                                          Order</a>
+                                  </div>
+                              </div>
+                          </div>
+                     
+                        <!--end card menu-->
+
+                                                        <!--end checking is order-->
+                    </div>
+                                                <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                        <!--card menu-->
+                        <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                          <div class="card-body d-flex flex-column text-center ">
+                              <img src="src/image/Rice Bowl Fire Chicken Mentai.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                    
+                              <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">ChickPop Saus BBQ (LAUK SAJA)</p>
+                    
+                              <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                  Rp. 27.500                        </p>
+                    
+                              <div class="form-inline mt-3 mb-0 mx-60">
+                                   <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                   hover:bg-gray-400  text-black'> +
+                                      Order</a>
+                              </div>
+                          </div>
+                      </div>
+                 
+                        <!--end card menu-->
+
+                                                        <!--end checking is order-->
+                    </div>
+                                                <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                        <!--card menu-->
+                        <div class="card 'border border-gray-300  bg-white rounded-3xl shadow-3xl overflow-hidden">
+                          <div class="card-body d-flex flex-column text-center ">
+                              <img src="src/image/Rice Bowl Fire Chicken Mentai.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                    
+                              <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">ChickPop Sambal Matah (LAUK SAJA)</p>
+                    
+                              <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                  Rp. 27.500                        </p>
+                    
+                              <div class="form-inline mt-3 mb-0 mx-60">
+                                   <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                   hover:bg-gray-400  text-black'> +
+                                      Order</a>
+                              </div>
+                          </div>
+                      </div>
+                 
+                        <!--end card menu-->
+
+                                                        <!--end checking is order-->
+                    </div>
+
+                    <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                      <!--card menu-->
+                    
+                        <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                            <div class="card-body d-flex flex-column text-center ">
+                                <img src="src/image/Rice Bowl Fire Chicken Mentai.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                      
+                                <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">ChickPop Sambal Geprek (LAUK SAJA)</p>
+                      
+                                <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                    Rp. 27.500                        </p>
+                      
+                                <div class="form-inline mt-3 mb-0 mx-60">
+                                     <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                     hover:bg-gray-400  text-black'> +
+                                        Order</a>
+                                </div>
+                            </div>
+                        </div>
+                   
+                      <!--end card menu-->
+
+                                                      <!--end checking is order-->
+                  </div>
+
+                  <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                    <!--card menu-->
+                    <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                      <div class="card-body d-flex flex-column text-center ">
+                          <img src="src/image/Rice Bowl Fire Chicken Mentai.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                
+                          <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Original Chickpop (LAUK SAJA)</p>
+                
+                          <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                              Rp. 27.500                        </p>
+                
+                          <div class="form-inline mt-3 mb-0 mx-60">
+                               <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                               hover:bg-gray-400  text-black'> +
+                                  Order</a>
+                          </div>
+                      </div>
+                  </div>
+             
+                    <!--end card menu-->
+
+                                                    <!--end checking is order-->
+                </div>
+
+                <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                  <!--card menu-->
+                  <div class="card 'border border-gray-300  bg-white rounded-3xl shadow-3xl overflow-hidden">
+                    <div class="card-body d-flex flex-column text-center ">
+                        <img src="src/image/Rice Bowl Fire Chicken Mentai.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+              
+                        <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Mentai ChickPop (LAUK SAJA)</p>
+              
+                        <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                            Rp. 27.500                        </p>
+              
+                        <div class="form-inline mt-3 mb-0 mx-60">
+                             <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                             hover:bg-gray-400  text-black'> +
+                                Order</a>
+                        </div>
+                    </div>
+                </div>
+           
+                  <!--end card menu-->
+
+                                                  <!--end checking is order-->
+              </div>
+
+              <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                <!--card menu-->
+              
+                  <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                      <div class="card-body d-flex flex-column text-center ">
+                          <img src="src/image/Rice Bowl Fire Chicken Mentai.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                
+                          <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Duo Chicken Popcorn (LAUK SAJA)</p>
+                
+                          <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                              Rp. 27.500                        </p>
+                
+                          <div class="form-inline mt-3 mb-0 mx-60">
+                               <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                               hover:bg-gray-400  text-black'> +
+                                  Order</a>
+                          </div>
+                      </div>
+                  </div>
+             
+                <!--end card menu-->
+
+                                                <!--end checking is order-->
+            </div>
+
+            <div class="col-6 col-md-4 mb-3 mx-auto">
+
+              <!--card menu-->
+              <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                <div class="card-body d-flex flex-column text-center ">
+                    <img src="src/image/Rice Bowl Fire Chicken Mentai.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+          
+                    <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Toping Crazy Ricebowl</p>
+          
+                    <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                        Rp. 27.500                        </p>
+          
+                    <div class="form-inline mt-3 mb-0 mx-60">
+                         <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                         hover:bg-gray-400  text-black'> +
+                            Order</a>
+                    </div>
+                </div>
+            </div>
+       
+              <!--end card menu-->
+
+                                              <!--end checking is order-->
+          </div>
+
+          <div class="col-6 col-md-4 mb-3 mx-auto">
+
+            <!--card menu-->
+            <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+              <div class="card-body d-flex flex-column text-center ">
+                  <img src="src/image/Rice Bowl Fire Chicken Mentai.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+        
+                  <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">ChickPop Cabe Ijo (LAUK SAJA)</p>
+        
+                  <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                      Rp. 27.500                        </p>
+        
+                  <div class="form-inline mt-3 mb-0 mx-60">
+                       <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                       hover:bg-gray-400  text-black'> +
+                          Order</a>
+                  </div>
+              </div>
+          </div>
+     
+            <!--end card menu-->
+
+                                            <!--end checking is order-->
+        </div>
+                                            </div>   
+                                                            </div>
+                                                            
+                                  <div class="tab-pane fade " id="desserts" role="tabpanel" aria-labelledby="desserts-tab">
+                                                                  <div class="row" id="menu-category-4-row-0">
+                                                  <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                          <!--card menu-->
+                          <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                            <div class="card-body d-flex flex-column text-center ">
+                                <img src="src/image/silky leci.jpg"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                      
+                                <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Silky Puding Leci</p>
+                      
+                                <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                    Rp. 3.000                        </p>
+                      
+                                <div class="form-inline mt-3 mb-0 mx-60">
+                                     <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                     hover:bg-gray-400  text-black'> +
+                                        Order</a>
+                                </div>
+                            </div>
+                        </div>
+                          <!--end card menu-->
+
+                                                          <!--end checking is order-->
+                      </div>
+                                                  <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                          <!--card menu-->
+                          <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                            <div class="card-body d-flex flex-column text-center ">
+                                <img src="src/image/silky taro.jpg"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                      
+                                <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Silky Puding Taro</p>
+                      
+                                <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                    Rp. 3.000                     </p>
+                      
+                                <div class="form-inline mt-3 mb-0 mx-60">
+                                     <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                     hover:bg-gray-400  text-black'> +
+                                        Order</a>
+                                </div>
+                            </div>
+                        </div>
+                          <!--end card menu-->
+
+                                                          <!--end checking is order-->
+                      </div>
+                                                  <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                          <!--card menu-->
+                          <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                            <div class="card-body d-flex flex-column text-center ">
+                                <img src="src/image/silky coklat.png"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                      
+                                <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Silky Puding Coklat</p>
+                      
+                                <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                    Rp. 3.000                        </p>
+                      
+                                <div class="form-inline mt-3 mb-0 mx-60">
+                                     <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                     hover:bg-gray-400  text-black'> +
+                                        Order</a>
+                                </div>
+                            </div>
+                        </div>
+                          <!--end card menu-->
+
+                                                          <!--end checking is order-->
+                      </div>
+                                              </div>
+                                                              </div>
+
+
+                                  <div class="tab-pane fade " id="snacks" role="tabpanel" aria-labelledby="snacks-tab">
+                                                                  <div class="row" id="menu-category-6-row-0">
+                                                  <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                          <!--card menu-->
+             
+
+        <div class="card 'border border-gray-300  bg-white rounded-3xl shadow-3xl overflow-hidden">
+            <div class="card-body d-flex flex-column text-center ">
+                <img src="src/image/risol mayo.webp"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+    
+                <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Risol Mayo Lumer per 1pcs</p>
+    
+                <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                    Rp. 3.000                       </p>
+    
+                <div class="form-inline mt-3 mb-0 mx-60">
+                     <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                   hover:bg-gray-400  text-black'> +
+                      Order</a>
+                </div>
+            </div>
+        </div>
+
+                          <!--end card menu-->
+
+                                                          <!--end checking is order-->
+                      </div>
+                                                  <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                          <!--card menu-->
+                          
+
+          <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+             <div class="card-body d-flex flex-column text-center ">
+                <img src="src/image/keju aroma.webp" class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+    
+                <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Keju Aroma per 5pcs Sering SOLD OUT</p>
+    
+                <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                     Rp. 10.000                        </p>
+    
+                <div class="form-inline mt-3 mb-0 mx-60">
+                     <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                      hover:bg-gray-400  text-black'> +
+                        Order</a>
+                 </div>
+             </div>
+         </div>
+
+
+
+                          <!--end card menu-->
+
+                                                          <!--end checking is order-->
+                      </div>
+                                                  <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                          <!--card menu-->
+                          <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                            <div class="card-body d-flex flex-column text-center ">
+                                <img src="src/image/risol mentai.webp" class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                      
+                                <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Risol Spicy Mentai per 1pcs</p>
+                      
+                                <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                    Rp. 3.000                     </p>
+                      
+                                <div class="form-inline mt-3 mb-0 mx-60">
+                                     <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                     hover:bg-gray-400  text-black'> +
+                                        Order</a>
+                                </div>
+                            </div>
+                        </div>
+                  
+                          <!--end card menu-->
+
+                                                          <!--end checking is order-->
+                      </div>
+
+                      <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                        <!--card menu-->
+                        <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                          <div class="card-body d-flex flex-column text-center ">
+                              <img src="src/image/fish ball.webp" class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                    
+                              <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Fishball per 5pcs</p>
+                    
+                              <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                  Rp. 8.000                       </p>
+                    
+                              <div class="form-inline mt-3 mb-0 mx-60">
+                                   <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                   hover:bg-gray-400  text-black'> +
+                                      Order</a>
+                              </div>
+                          </div>
+                      </div>
+                
+                        <!--end card menu-->
+
+                                                        <!--end checking is order-->
+                    </div>
+                                              </div>                                
+                                                              </div>
+
+                           
+                                  <div class="tab-pane fade " id="beverages" role="tabpanel" aria-labelledby="beverages-tab">
+                                                                  <div class="row" id="menu-category-5-row-0">
+                                                  <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                          <!--card menu-->
+                          <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                            <div class="card-body d-flex flex-column text-center ">
+                                <img src="src/image/ice tea.webp"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                      
+                                <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Ice Tea</p>
+                      
+                                <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                    Rp. 6.000                       </p>
+                      
+                                <div class="form-inline mt-3 mb-0 mx-60">
+                                     <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                     hover:bg-gray-400  text-black'> +
+                                        Order</a>
+                                </div>
+                            </div>
+                        </div>
+                          <!--end card menu-->
+
+                                                          <!--end checking is order-->
+                      </div>
+                                                  <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                          <!--card menu-->
+                          <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                            <div class="card-body d-flex flex-column text-center ">
+                                <img src="src/image/lemon tea.webp"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                      
+                                <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Ice Lemon Tea</p>
+                      
+                                <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                    Rp.10.000                      </p>
+                      
+                                <div class="form-inline mt-3 mb-0 mx-60">
+                                     <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                     hover:bg-gray-400  text-black'> +
+                                        Order</a>
+                                </div>
+                            </div>
+                        </div>
+                          <!--end card menu-->
+
+                                                          <!--end checking is order-->
+                      </div>                              
+                                              </div> 
+                                                              </div>
+
+
+
+                                  <div class="tab-pane fade" id="side-dish" role="tabpanel" aria-labelledby="side-dish-tab">
+                                                                  <div class="row" id="menu-category-7-row-0">
+                                                  <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                          <!--card menu-->
+                          <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                            <div class="card-body d-flex flex-column text-center ">
+                                <img src="src/image/saus fire.webp"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                      
+                                <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Saus Fire</p>
+                      
+                                <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                    Rp. 5.000                      </p>
+                      
+                                <div class="form-inline mt-3 mb-0 mx-60">
+                                     <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                     hover:bg-gray-400  text-black'> +
+                                        Order</a>
+                                </div>
+                            </div>
+                        </div>
+                          <!--end card menu-->
+
+                                                          <!--end checking is order-->
+                      </div>
+                                       
+                                                  <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                          <!--card menu-->
+                          <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                            <div class="card-body d-flex flex-column text-center ">
+                                <img src="src/image/saus bbq.webp"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                      
+                                <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Saus BBQ</p>
+                      
+                                <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                    Rp. 5.000                      </p>
+                      
+                                <div class="form-inline mt-3 mb-0 mx-60">
+                                     <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                     hover:bg-gray-400  text-black'> +
+                                        Order</a>
+                                </div>
+                            </div>
+                        </div>
+                          <!--end card menu-->
+
+                                                          <!--end checking is order-->
+                      </div>
+
+                      <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                        <!--card menu-->
+                        <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                          <div class="card-body d-flex flex-column text-center ">
+                              <img src="src/image/sambal geprek.jpg"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                    
+                              <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Sambal Geprek</p>
+                    
+                              <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                  Rp. 6.000                       </p>
+                    
+                              <div class="form-inline mt-3 mb-0 mx-60">
+                                   <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                   hover:bg-gray-400  text-black'> +
+                                      Order</a>
+                              </div>
+                          </div>
+                      </div>
+                        <!--end card menu-->
+
+                                                        <!--end checking is order-->
+                    </div>
+
+                    <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                      <!--card menu-->
+                      <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                        <div class="card-body d-flex flex-column text-center ">
+                            <img src="src/image/sambal matah.jpg"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                  
+                            <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Sambal Matah</p>
+                  
+                            <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                                Rp. 6.000                       </p>
+                  
+                            <div class="form-inline mt-3 mb-0 mx-60">
+                                 <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                                 hover:bg-gray-400  text-black'> +
+                                    Order</a>
+                            </div>
+                        </div>
+                    </div>
+                      <!--end card menu-->
+
+                                                      <!--end checking is order-->
+                  </div>
+                  <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                    <!--card menu-->
+                    <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                      <div class="card-body d-flex flex-column text-center ">
+                          <img src="src/image/saus mentai.jpeg"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                
+                          <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Saus Mentai</p>
+                
+                          <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                              Rp. 5.000                       </p>
+                
+                          <div class="form-inline mt-3 mb-0 mx-60">
+                               <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                               hover:bg-gray-400  text-black'> +
+                                  Order</a>
+                          </div>
+                      </div>
+                  </div>
+                    <!--end card menu-->
+
+                                                    <!--end checking is order-->
+                </div>
+
+                  <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                    <!--card menu-->
+                    <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                      <div class="card-body d-flex flex-column text-center ">
+                          <img src="src/image/cabe ijo.jpg"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+                
+                          <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Cabe Ijo</p>
+                
+                          <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                              Rp. 6.000                       </p>
+                
+                          <div class="form-inline mt-3 mb-0 mx-60">
+                               <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                               hover:bg-gray-400  text-black'> +
+                                  Order</a>
+                          </div>
+                      </div>
+                  </div>
+                    <!--end card menu-->
+
+                                                    <!--end checking is order-->
+                </div>
+
+                <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                  <!--card menu-->
+                  <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                    <div class="card-body d-flex flex-column text-center ">
+                        <img src="src/image/telur.jpg"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+              
+                        <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Telur Mata Sapi</p>
+              
+                        <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                            Rp. 27.500                        </p>
+              
+                        <div class="form-inline mt-3 mb-0 mx-60">
+                             <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                             hover:bg-gray-400  text-black'> +
+                                Order</a>
+                        </div>
+                    </div>
+                </div>
+                  <!--end card menu-->
+
+                                                  <!--end checking is order-->
+              </div>
+
+              <div class="col-6 col-md-4 mb-3 mx-auto">
+
+                <!--card menu-->
+                <div class="card 'border border-gray-300 border-   bg-white rounded-3xl shadow-3xl overflow-hidden">
+                  <div class="card-body d-flex flex-column text-center ">
+                      <img src="src/image/nasi.jpeg"class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+            
+                      <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px]  mx-2'">Nasi Putih</p>
+            
+                      <p class="card-text text-hokben-red my-2 font-semibold text-center text-blue-600 text-[20px]  ">
+                          Rp. 7.000                       </p>
+            
+                      <div class="form-inline mt-3 mb-0 mx-60">
+                           <a class='block mb-3 px-60 py-3 font-bold tracking-wide text-center capitalize transition-colors duration-300 transform bg-orange-600 rounded-[14px] shadow-xl
+                           hover:bg-gray-400  text-black'> +
+                              Order</a>
+                      </div>
+                  </div>
+              </div>
+                <!--end card menu-->
+
+                                                <!--end checking is order-->
+            </div>
+                                              </div>
+                                                              </div>
+                       
+                              </div>
+          <!--end tab content menu-->
+          <p class="mt-3 font-semibold">* Salad &amp; Soup only for Dine In</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- <div class="col-6 col-md-4 mb-3 mx-auto">
+  <div class="card card-rounded">
+      <div class="card-body d-flex flex-column text-center ">
+          <img src="src/image/Rice Bowl Fire Chicken Mentai.png" class="img-fluid rounded" loading="lazy" alt="RICE BWOL FIRE CHICKEN MENTAI">
+
+          <p class="card-text mt-3 mb-0 font-bold text-center text-blue-600 text-[20px] mx-2'">Rice Bowl Fire Chicken Mentai</p>
+       
+          <p class="card-text text-hokben-red my-3">
+              Rp. 27.500                        </p>
+
+          <div class="form-inline mt-3 mb-0">
+              <a class="text-hokben-red mx-auto" href="https://www.hokben.co.id/menu/510/hoka-hemat-1"><u>Details</u></a>
+               <a class="btn btn-yellow-hokben mx-auto" href="https://www.hokben.co.id/menu/510/hoka-hemat-1">+
+                  Order</a>
+          </div>
+      </div>
+  </div>
+</div> -->
+
+ 
+</section>
+
+ 
+
+
+<section id="Location" class="text-center">
+  <br>
+  <br>
+  <br>
+  <br>
+  
+<div class="text-center" data-aos="fade">
+  <h1 class="text-blue-600 text-6xl font-extrabold drop-shadow-md shadow-black-600/50 uppercase">Our Location</h1>
+</div>
+
+<div class="mt-10 mb-10">
+<div class="container">
+  <div class="row ">
+    
+    <iframe
+    class="items-center rounded h-300-px md:h-400-px "
+    data-aos="fade-up"
+    src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d31913.22163263534!2d103.969421!3d1.046596!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMcKwMDInNDcuNyJOIDEwM8KwNTgnMDkuOSJF!5e0!3m2!1sen!2sus!4v1703348665421!5m2!1sen!2sus"
+    width="" height="350" style="border:0;"
+    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+  <a href="https://maps.app.goo.gl/Yn2UGBLnbAF15PqY8" target="_blank"  class="text-center mt-10 mb-10 text-xl font-bold lg:hover:text-black ">Batam, Buliang, Batu Aji, Batam City, Riau Islands 29425, Indonesia</a>
+  </div>
+  </div>
+</div>
+  
+</section>
+
+
+<section >
+  <div
+  class=" w-full h-full bg-no-repeat bg-cover bg-fixed mb " data-aos="fade"
+  style="background-image: url('');  ">
+<div class="container mt-10 ">
+<div class="row ">
+
+  <div class="col-12 col-md-6 my-6 ">
+    <img class="img-fluid mx-auto d-block" src="src/image/Nge eat bg1.jpg" alt="Logo">
+    <div class="alert alert-danger text-center" role="alert"> Follow Us</div>
+    <div class="flex justify-center gap-2 md:flex-row md:space-x- md:mt-5 ">
+      <a href="https://wa.me/+6281382475411"target="_blank" rel="noopener noreferrer">
+          <img src="https://img.icons8.com/fluent/30/000000/whatsapp.png" />
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <img src="https://img.icons8.com/fluent/30/000000/instagram-new.png" />
+      </a>
+      <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
+          <img src="https://img.icons8.com/fluent/30/000000/tiktok.png" />
+      </a>
+  </div>
+</div>
+  
+  <div id="Order" class="col-12 col-md-6 my-10 text-center ">
+    <div class="text-center" data-aos="fade">
+      <h1 class="text-blue-600 text-6xl font-extrabold drop-shadow-md shadow-black-600/50 uppercase">PEMESANAN ONLINE</h1>
+    </div>
+      <div class="card card-rounded mt-10  bg-orange-600">
+        <div class=" mx-4 mt-4">
+          <a class=' mb-1 font-bold h-[20px] p-2 bg-red-600 rounded-full shadow-xl text-white'>Pesan Sekarang</a>
+            </div>
+            <div class="card-body  ">
+              <div class="row items-center">
+      
+                 <div class="col-5 col-md-5 mb-3 mx-auto">
+                          <div id="" class="btn bg-slate-50 rounded-[14px] shadow-xl
+                          hover:bg-gray-400  text-black ">
+                              <a href="https://wa.me/+6281382475411" target="_blank"  class="mb-2"><img src="src/image/WhatsApp-logo-768x432-removebg-preview (1).png" height="20"></a>
+                              Big Order
+                          </div>
+                  </div>
+  
+                <div class="col-5 col-md-5 mb-3 mx-auto">
+                          <div id="" class="btn bg-white rounded-[14px] shadow-xl
+                          hover:bg-gray-400  text-black ">
+                              <a href="https://food.grab.com/id/en/restaurant/ngeeat-batu-aji-perum-genta-ii-delivery/6-C3KZNAU1GLEDL2?sourceID=20240123_174934_9DC834B9031446DA89A589FD55752792_MEXMPS" target="_blank" class="mb-2 "><img src="src/image/grab_-food_logo-removebg-preview (2).png" height="20"></span>
+                              Grab Food
+                          </div>
+                  </div>
+              </div>
+            </div>
+  
+              <div class="card-body  ">
+                <div class="row items-center">
+  
+                  <div class="col-5 col-md-5 mb-3 mx-auto">
+                    <div id="" class="btn bg-white rounded-[14px] shadow-xl
+                    hover:bg-gray-400  text-black ">
+                        <a href="https://shopee.co.id/universal-link/now-food/shop/20112729?deep_and_deferred=1&shareChannel=copy_link" target="_blank"  class="mb-2 "><img src="src/image/Shopee-Food-Logo-768x432.png" height="20"></a>
+                        Shopee Food
+                    </div>
+            </div>
+  
+            <div class="col-5 col-md-5 mb-3 mx-auto">
+              <div id="" class="btn bg-white rounded-[14px] shadow-xl
+              hover:bg-gray-400  text-black ">
+                  <a href="https://gofood.link/a/yTSSCJq" target="_blank"  class="mb-2 "><img src="src/image/Gofood-logo.png" height="20"></a>
+                  Go Food
+              </div>
+             </div>
+            </div>
+         </div>
+          </div>
+          
+      </div>
+  </div>
+
+</div>
+</div>
+</div>
+
+
+</section>
+
+
+<div class="container-fluid bg-white">
+  <div class="container">
+      <div class="row">
+          <div class="col-12 col-md-5 mt-3">
+              <h4 class="text-center text-uppercase text-md-left">Links</h4>
+              <div class="row ">
+                  <div class="col-6">
+                      <ul class="list-unstyled text-center text-md-left" style="line-height: 30px">
+                          <li>
+                              <a class="text-muted" href="https://www.hokben.co.id/corporate">About Us</a>
+                          </li>
+                          <li>
+                              <a class="text-muted" href="https://www.hokben.co.id/contact-us">Contact Us</a>
+                          </li>
+                          <li>
+                              <a class="text-muted" href="https://www.hokben.co.id/terms">Terms and Conditions</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6">
+                      <ul class="list-unstyled text-center text-md-left" style="line-height: 30px">
+                          <li>
+                              <a class="text-muted" href="https://www.hokben.co.id/privacy-policy">Privacy Policy</a>
+                          </li>
+                          <li>
+                              <a class="text-muted" href="https://www.hokben.co.id/order-history">Order Tracking</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-12 col-md-2 mt-3">
+              <div class="text-center">
+                  <img class="mx-auto my-auto hokben-img-delivery" src="src/image/Nge eat bg1.jpg" height="100">
+              </div>
+          </div>
+
+          <div class="col-12 col-md-5 mt-3 col-md-center">
+              <h4 class="text-center text-uppercase text-lg-center mr-ml-6">
+                  Follow Us                    </h4>
+              <ul class="list-inline text-center text-lg-center mb-0" style="line-height: 30px">
+                  <li class="list-inline-item">
+                      <a href="https://www.youtube.com/hokbenable" target="_blank"><img src="https://www.hokben.co.id/assets/img/icon/Youtube_48px.svg" width="35px" height="35px"></a>
+                  </li>
+                  <li class="list-inline-item">
+                      <a href="https://twitter.com/HokBen" target="_blank"><img src="https://www.hokben.co.id/assets/img/icon/Twitter_48px.svg" width="35px" height="35px"></a>
+                  </li>
+                  <li class="list-inline-item">
+                      <a href="https://www.facebook.com/pages/Hoka-Hoka-Bento/22801653893" target="_blank"><img src="https://www.hokben.co.id/assets/img/icon/Facebook_48px.svg" width="35px" height="35px"></a>
+                  </li>
+                  <li class="list-inline-item">
+                      <a href="https://www.instagram.com/hokben_id/" target="_blank"><img src="https://www.hokben.co.id/assets/img/icon/instagram.svg" width="27px" height="27px"></a>
+                  </li>
+                  <li class="list-inline-item">
+                      <a href="https://www.tiktok.com/@hokben_id" target="_blank"><img src="https://www.hokben.co.id/assets/img/icon/tiktok.png" width="30px" height="30px"></a>
+                  </li>
+                  <li class="list-inline-item">
+                      <a href="https://wa.me/6281111500505" target="_blank"><img src="https://www.hokben.co.id/assets/img/icon/whatsapp.png" width="30px" height="30px"></a>
+                  </li>
+              </ul>
+
+              <!-- <p class="text-center text-md-right" style="line-height: 30px">Email : <b>info@hokben.co.id</b></p> -->
+         
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-10 mx-auto my-2">
+              <p class="small text-center" style="line-height: 15px">All images and materials are copyright protected and are the property of PT. Eka Bogainti. Unauthorized use and/or duplication of these images and materials without written permission is against the law.                    </p>
+          </div>
+      </div>
+  </div>
+
+  <div class="row">
+      <img class="img-fluid" src="https://www.hokben.co.id/assets/img/group_539.png" style="height: auto">
+  </div>
+</div>
+      
+        
+                
+
+ 
+<footer class="flex flex-col bg-orange-600 space-y-10 justify-center m-10 p-2 mt-10 ">
+  <nav class="flex justify-center flex-wrap text-white md:flex-row gap-3 md:mt-5  font-medium">
+      <a class="hover:text-gray-900" href="#Home">Home</a>
+      <a class="hover:text-gray-900" href="#About">About</a>
+      <a class="hover:text-gray-900" href="#Menu">Menu</a>
+      <a class="hover:text-gray-900" href="#Location">Location</a>
+  </nav>
+
+  <div class="flex justify-center gap-2 md:flex-row md:space-x- md:mt-5 ">
+      <a href="https://wa.me/+6281382475411"target="_blank" rel="noopener noreferrer">
+          <img src="https://img.icons8.com/fluent/30/000000/whatsapp.png" />
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <img src="https://img.icons8.com/fluent/30/000000/instagram-new.png" />
+      </a>
+      <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
+          <img src="https://img.icons8.com/fluent/30/000000/tiktok.png" />
+      </a>
+  </div>
+  <p class="text-center text-white font-medium">&copy; 2023 Nge Eat. All rights reservered.</p>
+</footer>
+
+
+
+
+<style>
+  @media (max-width: 768px) {
+    .text-4xl {
+      font-size: 3xl;
+    }
+    .h-300-px {
+      height: 250px;
+    }
+  }
+</style>
+
+<script>
+function sub()
+{
+if((document.form1.name.value!='')&&(document.form1.email.value!='')&&(document.form1.subject.value!=''))
+{
+ alert("Thank you for reaching us!");
+}
+ }
+ </script>
+
+</script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.js"></script>
+
+
+
+
+</body>
+</html>
